@@ -3,6 +3,7 @@ package todoApp;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.ParseException;
 
 public class RemoveTask extends ListTasks {
 
@@ -13,6 +14,15 @@ public class RemoveTask extends ListTasks {
       Files.write(filePath, tasks);
     } catch (Exception e) {
       System.out.println(e);
+    }
+  }
+
+  public boolean isParsable(String taskToRemoveIfItsString){
+    try{
+      Integer.parseInt(taskToRemoveIfItsString);
+      return true;
+    }catch(Exception e){
+      return false;
     }
   }
 }

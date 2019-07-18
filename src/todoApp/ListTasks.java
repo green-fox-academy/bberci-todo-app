@@ -9,6 +9,7 @@ import java.util.*;
 public class ListTasks {
   String path = "todoApp/list.txt";
   List<String> tasks = new ArrayList<>();
+  boolean completed;
 
   public List<String> readFile(){
     Path filePath = Paths.get(path);

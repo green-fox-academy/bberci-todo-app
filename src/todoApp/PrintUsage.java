@@ -1,5 +1,6 @@
 package todoApp;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PrintUsage {
@@ -9,6 +10,8 @@ public class PrintUsage {
   String option2 = "\t-a   Adds a new task\n";
   String option3 = "\t-r   Removes a task\n";
   String option4 = "\t-c   Comletes a task";
+
+
 
   public void makeunderline(){
     String finalUnderline = "";

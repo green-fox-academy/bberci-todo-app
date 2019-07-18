@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 public class AddTasks extends ListTasks {
 
   public void addTasks(String newTask) {
-    readFile().add(newTask);
+    readFile().add("[ ]" + newTask);
     try {
       Path filePath = Paths.get(path);
       Files.write(filePath, tasks);
