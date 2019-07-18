@@ -10,18 +10,18 @@ public class PrintUsage {
   String option3 = "\t-r   Removes a task\n";
   String option4 = "\t-c   Comletes a task";
 
-
-  public void pintStartSreen(){
-    String finalunderline = "";
+  public void makeunderline(){
+    String finalUnderline = "";
     String underline[] = new String[name.length()];
     for (int i = 0; i < name.length(); i++) {
       underline[i] = underLineStyle;
     }
-    finalunderline = Arrays.toString(underline);
+    for (String semifinalUnderline : underline) {
+      finalUnderline = finalUnderline.concat(semifinalUnderline);
+    }
     System.out.println(name);
-    System.out.println(finalunderline);
+    System.out.println(finalUnderline);
+    System.out.println();
     System.out.println(option1 + option2 + option3 + option4);
-
-
   }
 }
